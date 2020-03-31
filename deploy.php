@@ -8,11 +8,11 @@ require 'recipe/laravel.php';
 set('application', 'gula akunting');
 
 // Project repository
-set('repository', 'git@gitlab.com:layanacorp/akunting.git');
+set('repository', 'git@github.com:fendysketsa/salon-akunting.git');
 set('branch', 'master');
 
 // [Optional] Allocate tty for git clone. Default value is false.
-set('git_tty', true);
+set('git_tty', false);
 
 //set('writable_mode', 'chown');
 
@@ -39,7 +39,7 @@ task('build', function () {
 
 // [Optional] if deploy fails automatically unlock.
 after('deploy:failed', 'deploy:unlock');
- 
+
 // Migrate database before symlink new release.
- 
+
 //before('deploy:symlink', 'artisan:migrate');
